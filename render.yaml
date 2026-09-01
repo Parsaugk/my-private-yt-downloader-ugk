@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: yt-telegram-bot
+    env: docker
+    plan: starter
+    healthCheckPath: /
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: ALLOWED_USER_IDS
+        sync: false
